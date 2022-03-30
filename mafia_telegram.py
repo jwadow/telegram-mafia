@@ -55,11 +55,9 @@ def start(m, res=False):
     bot.send_message(m.chat.id, f"👁️ Привет, введи число игроков чтоб порубиться в мафию")
 
 @bot.message_handler(content_types=["text"])
-def handle_text(message):
-    #bot.send_message(message.chat.id, read_blocked())
-    
+def handle_text(message):    
     text_send = mafia(message.text)
     bot.send_message(message.chat.id, text_send)
-    print(message.chat.id)
+    print("Received message from: " + message.chat.id)
 
 bot.polling(none_stop=True, interval=0, timeout=500000)
