@@ -15,7 +15,6 @@ with open("token.txt","a+") as f:
 with open ("token.txt", 'r') as token_file:
     for line in token_file:
         token = line
-        print(token + "123")
     token_file.close()
 
 bot = telebot.TeleBot(token)
