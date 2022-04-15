@@ -59,4 +59,5 @@ def handle_text(message):
     bot.send_message(message.chat.id, text_send)
     print("Received message from: " + message.chat.id)
 
-bot.polling(none_stop=True, interval=0, timeout=500000)
+while True:
+    bot.polling(none_stop=True, interval=0, timeout=500000)
